@@ -1,0 +1,6 @@
+framework module U8CaptureService {
+  umbrella header "U8CaptureService-umbrella.h"
+
+  export *
+  module * { export * }
+}
