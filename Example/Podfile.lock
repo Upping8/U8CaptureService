@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  U8CaptureService: 97de011d8d2c6cce6237cadd29dba1002b475a39
+  U8CaptureService: b59a5f15bc300abc641af9a09195e37ac9ab7d77
 
 PODFILE CHECKSUM: 99b32cb26074ae04f155f14c265be87b0e6bf6fa
 
