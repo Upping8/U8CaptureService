@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fiT-Zs-6tx">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +19,102 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xna-nV-Q9d">
+                                <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQV-PO-bdq">
+                                <rect key="frame" x="16" y="580" width="96" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="Jlf-RR-r7x"/>
+                                    <constraint firstAttribute="height" constant="31" id="tYa-cP-pI2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="拍照"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="whP-gf-Uak" eventType="touchUpInside" id="GXS-lo-IwX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwz-AP-57p">
+                                <rect key="frame" x="16" y="515" width="96" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="XJE-LQ-q6y"/>
+                                    <constraint firstAttribute="height" constant="31" id="wpZ-4M-wh0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="切换摄像头"/>
+                                <connections>
+                                    <action selector="switchCamera:" destination="whP-gf-Uak" eventType="touchUpInside" id="aLi-IV-qzw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmc-1M-zPu">
+                                <rect key="frame" x="146.5" y="548" width="82" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="GPA-GJ-dZE"/>
+                                    <constraint firstAttribute="width" constant="82" id="Zr2-px-757"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="开始拍摄"/>
+                                <connections>
+                                    <action selector="startOrStopCapture:" destination="whP-gf-Uak" eventType="touchUpInside" id="F4r-IB-yPL"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gbU-ba-FqU">
+                                <rect key="frame" x="263" y="515.5" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="0cY-sn-e0U"/>
+                                    <constraint firstAttribute="height" constant="96" id="XlY-Vk-y3s"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lwz-AP-57p" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="55G-37-7ep"/>
+                            <constraint firstAttribute="trailing" secondItem="gbU-ba-FqU" secondAttribute="trailing" constant="16" id="9Ea-3A-rV0"/>
+                            <constraint firstItem="Gmc-1M-zPu" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="RMf-Ju-hMY"/>
+                            <constraint firstItem="Xna-nV-Q9d" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="8" symbolic="YES" id="UQg-bm-lN7"/>
+                            <constraint firstItem="gbU-ba-FqU" firstAttribute="centerY" secondItem="Gmc-1M-zPu" secondAttribute="centerY" id="Wxn-dF-G0t"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="Xna-nV-Q9d" secondAttribute="bottom" id="XOz-CQ-iSL"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="Gmc-1M-zPu" secondAttribute="bottom" constant="88" id="b7b-63-m7I"/>
+                            <constraint firstItem="Xna-nV-Q9d" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="dl5-km-NAG"/>
+                            <constraint firstItem="xQV-PO-bdq" firstAttribute="top" secondItem="lwz-AP-57p" secondAttribute="bottom" constant="34" id="g02-of-lPA"/>
+                            <constraint firstItem="xQV-PO-bdq" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="icG-f6-Cjy"/>
+                            <constraint firstAttribute="trailing" secondItem="Xna-nV-Q9d" secondAttribute="trailing" id="jig-FM-HH2"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="xQV-PO-bdq" secondAttribute="bottom" constant="56" id="rkK-xj-aGM"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="B6f-sf-8N9"/>
+                    <connections>
+                        <outlet property="captureBtn" destination="Gmc-1M-zPu" id="zrD-gf-AnB"/>
+                        <outlet property="contentView" destination="Xna-nV-Q9d" id="oqc-oK-hea"/>
+                        <outlet property="resultImageView" destination="gbU-ba-FqU" id="0XO-G4-8K7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UUg-q6-XfD">
+            <objects>
+                <navigationController id="fiT-Zs-6tx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t54-dg-vms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="tfg-Dd-d8f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1K-Ov-9cT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527" y="432"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
